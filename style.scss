@@ -1,0 +1,233 @@
+// (intro and email sign up background)
+$color-navy-850: hsl(217, 28%, 15%);
+// (main background)
+$color-navy-900: hsl(218, 28%, 13%);
+// (footer background)
+$color-navy-950: hsl(216, 53%, 9%);
+// (testimonials background)
+$color-navy-800: hsl(219, 30%, 18%);
+
+// (inside call-to-action gradient)
+$color-teal-200: hsl(176, 68%, 64%);
+// (inside call-to-action gradient)
+$color-cyan-500: hsl(198, 60%, 50%);
+// (error)
+$color-red-500: hsl(0, 100%, 63%);
+
+$color-white: hsl(0, 0%, 100%);
+
+$font-relway: 'Raleway', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
+$font-weight-400: 400;
+$font-weight-700: 700;
+
+* {
+  padding: 0;
+  margin: 0;
+  &,
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: $font-open-sans;
+  font-weight: $font-weight-400;
+  font-size: 1.4rem;
+  color: $color-white;
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  background-color: $color-navy-900;
+}
+
+.header {
+  padding: 4rem 0 0;
+  display: flex;
+  align-items: center;
+  &__logo {
+    margin-right: auto;
+  }
+  &__nav {
+    display: flex;
+    color: $color-white;
+    gap: 4rem;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+.section__hero {
+  padding-top: 8rem;
+  max-width: 100rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  &-image {
+    width: 70%;
+  }
+  &-intro {
+    text-align: center;
+  }
+  &-title {
+    font-weight: $font-weight-700;
+    font-family: $font-relway;
+    line-height: 4.6rem;
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+  }
+  &-description {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  &-button {
+    padding: 1.5rem 8rem;
+    font-size: 1.6rem;
+    border-radius: 3rem;
+    color: $color-white;
+    background-color: $color-teal-200;
+  }
+}
+
+.section__features {
+  max-width: 115rem;
+  width: 100%;
+  margin: 0 auto;
+  .section__features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    gap: 10rem;
+  }
+  .section__feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    text-align: center;
+    &-title {
+      margin-top: 1.5rem;
+      font-family: $font-relway;
+      font-weight: $font-weight-700;
+    }
+    &-description {
+      max-width: 39rem;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      color: #ddd;
+    }
+  }
+}
+
+.section__productive {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-around;
+  &-image {
+    width: 110%;
+  }
+
+  .section-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &-bottom {
+      position: relative;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30%;
+        height: 0.2rem;
+        background-color: #ddd;
+        left: 0;
+        bottom: -10px;
+      }
+    }
+  }
+  &-title {
+    font-family: $font-relway;
+    line-height: 6rem;
+    font-weight: $font-weight-700;
+    font-size: 4rem;
+  }
+  &-description {
+    color: #ddd;
+    line-height: 1.5;
+    max-width: 40rem;
+    max-width: 50rem;
+  }
+  &-link {
+    color: $color-teal-200;
+  }
+}
+
+.section__testimonials {
+  display: flex;
+  gap: 4rem;
+  .section__card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: $color-navy-800;
+    padding: 4rem 3rem 2.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0.3rem 0.4rem 1rem #0808364f;
+    &-top {
+      color: #ddd;
+      font-size: 1.6rem;
+    }
+    &-bottom {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    &-pic {
+      width: 3.5rem;
+      border-radius: 50%;
+    }
+    &-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    &-position {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #ddd;
+    }
+  }
+}
