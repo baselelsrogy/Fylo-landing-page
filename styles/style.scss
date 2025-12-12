@@ -81,8 +81,15 @@ body {
   }
   &__nav {
     display: flex;
-    color: $color-white;
     gap: 4rem;
+  }
+  &__link {
+    color: #ccc;
+    transition: 0.3s;
+    &:hover {
+      color: $color-white;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -127,6 +134,10 @@ body {
     border-radius: 3rem;
     color: $color-white;
     background-color: $color-teal-200;
+    transition: 0.3s;
+    &:hover {
+      background-color: $color-cyan-500;
+    }
   }
 }
 
@@ -318,7 +329,29 @@ body {
     font-weight: 700;
     color: $color-white;
     background-color: $color-teal-200;
+    transition: 0.3s;
+    &:hover {
+      background-color: $color-cyan-500;
+    }
   }
+  &-err {
+    position: absolute;
+    bottom: -1rem;
+    left: 12rem;
+    color: white;
+    transition: 0.3s;
+    opacity: 0;
+  }
+}
+.valid {
+  color: lightgreen;
+  opacity: 1;
+  bottom: 1rem;
+}
+.error {
+  color: red;
+  opacity: 1;
+  bottom: 1rem;
 }
 
 .footer {
@@ -364,6 +397,15 @@ body {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      h3,
+      h4 {
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          color: $color-white;
+          transform: scale(1.05);
+        }
+      }
       h3 {
         font-weight: normal;
         font-weight: 1.6rem;
@@ -388,6 +430,12 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: 0.3s;
+    &:hover {
+      color: $color-teal-200;
+      cursor: pointer;
+      border-color: $color-teal-200;
+    }
   }
 }
 
